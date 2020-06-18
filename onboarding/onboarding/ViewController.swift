@@ -17,9 +17,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var scrollHeight: CGFloat! = 0.0
 
     //data for the slides
-    var titles = ["FAST DELIVERY","EXCITING OFFERS","SECURE PAYMENT"]
-    var descs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.","Lorem ipsum dolor sit amet, consectetur adipiscing elit.","Lorem ipsum dolor sit amet, consectetur adipiscing elit."]
-    var imgs = ["intro1","intro2","intro3"]
+    var titles = ["Register for an event today","My bookings, enter events","Now you are in your event hall","1:1 video chat with exhibitors"]
+    var descs = ["Enter events and register for the selected event","View registered events in my bookings from anywhere.","Jump right into a 1:1 video chat or enter a queue.","Select a booth, enter for a quick chat. Enter and exit booths freely."]
+    var imgs = ["intro1","intro2","intro3","intro4"]
 
     //get dynamic width and height of scrollview and save it
     override func viewDidLayoutSubviews() {
@@ -56,12 +56,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             txt1.textAlignment = .center
             txt1.font = UIFont.boldSystemFont(ofSize: 20.0)
             txt1.text = titles[index]
+            txt1.textColor = .white
 
             let txt2 = UILabel.init(frame: CGRect(x:32,y:txt1.frame.maxY+10,width:scrollWidth-64,height:50))
             txt2.textAlignment = .center
             txt2.numberOfLines = 3
             txt2.font = UIFont.systemFont(ofSize: 18.0)
             txt2.text = descs[index]
+            txt2.textColor = .white
 
             slide.addSubview(imageView)
             slide.addSubview(txt1)

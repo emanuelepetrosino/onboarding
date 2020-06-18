@@ -15,25 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-ub-v14">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-ub-v14">
                                 <rect key="frame" x="20" y="44" width="374" height="724"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="85f-Wc-1oT">
                                         <rect key="frame" x="168" y="679" width="39" height="37"/>
+                                        <connections>
+                                            <action selector="pageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Og4-5b-tgS"/>
+                                        </connections>
                                     </pageControl>
                                 </subviews>
+                                <color key="backgroundColor" red="0.35494303700000002" green="0.57307618859999998" blue="0.74904626610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="85f-Wc-1oT" secondAttribute="trailing" constant="167" id="1PJ-GW-YqS"/>
-                                    <constraint firstAttribute="bottom" secondItem="85f-Wc-1oT" secondAttribute="bottom" constant="8" id="4jj-gw-6Cf"/>
-                                    <constraint firstItem="85f-Wc-1oT" firstAttribute="top" secondItem="eb3-ub-v14" secondAttribute="top" constant="679" id="SxM-6W-TsY"/>
-                                    <constraint firstItem="85f-Wc-1oT" firstAttribute="leading" secondItem="eb3-ub-v14" secondAttribute="leading" constant="168" id="yww-Dc-b0L"/>
+                                    <constraint firstItem="85f-Wc-1oT" firstAttribute="leading" secondItem="XUJ-ri-0sK" secondAttribute="leading" constant="168" id="5Qn-xV-hzO"/>
+                                    <constraint firstItem="XUJ-ri-0sK" firstAttribute="bottom" secondItem="85f-Wc-1oT" secondAttribute="bottom" constant="8" id="POA-7u-DCF"/>
+                                    <constraint firstItem="XUJ-ri-0sK" firstAttribute="trailing" secondItem="85f-Wc-1oT" secondAttribute="trailing" constant="167" id="ZZt-9O-pw0"/>
+                                    <constraint firstItem="85f-Wc-1oT" firstAttribute="top" secondItem="XUJ-ri-0sK" secondAttribute="top" constant="679" id="mAM-Lf-Jt0"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="rI5-jy-61I"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="XUJ-ri-0sK"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czq-Pg-VYq">
                                 <rect key="frame" x="32" y="789" width="350" height="44"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.89712959530000003" green="0.77654808760000005" blue="0.43128472569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="vqx-Tb-Scy"/>
                                 </constraints>
@@ -41,7 +45,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.35494303700000002" green="0.57307618859999998" blue="0.74904626610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="czq-Pg-VYq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="9AE-X5-8x5"/>
                             <constraint firstItem="czq-Pg-VYq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="745" id="Ffz-uS-1V2"/>
